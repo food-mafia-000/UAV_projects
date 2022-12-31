@@ -11,12 +11,12 @@ while(True):
     lwr=np.array([0,160,20])
     upr=np.array([10,180,225])
    
-    #setting all values of non red h as 0
+    #setting all values of not red h as 0
     h,s,v=cv2.split(hsv)
     h[h>180]=0
     h[h<150]=0
 
-    cv2.imshow('1',hsv)
+#    cv2.imshow('1',hsv)
 
     #nomalizing to increase contrat and make clearer image
     normed = cv2.normalize(h, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8UC1)   #cv_8uc1-needed for contours
